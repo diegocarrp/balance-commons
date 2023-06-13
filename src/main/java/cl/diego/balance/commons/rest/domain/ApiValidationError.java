@@ -9,7 +9,7 @@ import java.util.List;
 public class ApiValidationError extends ApiError {
     private List<ApiSubError> subErrors;
 
-    ApiValidationError( ApiValidationException ex ) {
+    public ApiValidationError( ApiValidationException ex ) {
         super( ex.getStatus( ), ex.getMessage( ) );
         this.subErrors = ex.getSubErrors( );
     }
